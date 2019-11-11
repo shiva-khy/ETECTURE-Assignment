@@ -1,0 +1,37 @@
+/* Code By Webdevtrick ( https://webdevtrick.com )  */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: url('https://s3-prod-europe.autonews.com/s3fs-public/styles/width_792/public/Feb%204%20%20Main%20art%20iStock-670826400.jpg') no-repeat center center / cover;
+    
+}
+.form-horizontal {
+background: rgba(175, 203, 216, 0.616);
+p
+}
+.container {
+margin-top: 10%;
+}
+.progress {
+    height: 10px;
+}
+.control-label {
+    text-align: left !important;
+    padding-bottom: 7px;
+}
+.form-horizontal {
+    padding: 25px 20px;
+    border: 2px solid #e8eaed;
+    border-radius: 5px;
+}
+.fa-times {
+    color: red;
+}
+
+.header1{
+    text-align: center;
+    color:#195385;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 3px 2px rgba(175, 203, 216, 0.616);
+}

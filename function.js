@@ -1,4 +1,4 @@
-// Code By Webdevtrick ( https://webdevtrick.com ) 
+
 $(document).ready(function() {
 
     $('#password').keyup(function() {

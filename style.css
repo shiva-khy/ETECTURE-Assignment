@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    background: url('https://s3-prod-europe.autonews.com/s3fs-public/styles/width_792/public/Feb%204%20%20Main%20art%20iStock-670826400.jpg') no-repeat center center / cover;
+    background: url('Background.jpg') no-repeat center center / cover;
     
 }
 .form-horizontal {

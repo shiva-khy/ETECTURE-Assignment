@@ -66,3 +66,31 @@ text-shadow: 1px 2px rgba(207, 218, 223, 0.616);
 padding-top: 20px;
 
 }
+
+#pswd_info {
+    position:absolute;
+    bottom:-50px;
+    bottom: -115px\9; /* IE Specific */
+    right:15px;
+    width:250px;
+    padding:15px;
+    background: rgba(175, 203, 216, 0.616);
+    font-size:.875em;
+    border-radius:5px;
+    box-shadow:0 1px 3px #ccc;
+    border:1px solid #ddd;
+}
+#pswd_info::before {
+    content: "\25B2";
+    position:absolute;
+    top:-12px;
+    left:45%;
+    font-size:14px;
+    line-height:14px;
+    color:#ddd;
+    text-shadow:none;
+    display:block;
+}
+#pswd_info {
+    display:none;
+}

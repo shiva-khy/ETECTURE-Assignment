@@ -1,3 +1,9 @@
+$('#password').keyup(function() {
+}).focus(function() {
+    $('#pswd_info').show();
+}).blur(function() {
+    $('#pswd_info').hide();
+});
 
 $(document).ready(function() {
 

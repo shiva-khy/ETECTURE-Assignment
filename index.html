@@ -15,7 +15,7 @@
 <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-                <form class="form-horizontal mar-top-bot-50" id="validateForm" action="#">
+                <form class="form-horizontal mar-top-bot-50" id="validateForm" method="POST" action="#">
                         <h1 class="h1">Sign Up for Free </h1>
                             <label for="inputName" class="sr-only">Name</label>
                             <input type="text" id="inputName" class="form-control" placeholder="Name" required autofocus>
@@ -56,8 +56,8 @@
                                 <input id="confirm-password" name="confirm-password" type="password" placeholder="confirm_password" class="form-control input-md" required autofocus>
                             </div>
                         </div>
+                        <input id="sign-up" class="btn btn-lg btn-primary btn-block " type="submit" value="sign up">
                     </fieldset>
-                    <button  class="btn btn-lg btn-primary btn-block " type="submit">Sign up</button>
                 </form>
                 <div>
                     <p class="active"><strong>Makes Your Dreams Come True</strong> with&nbsp;an&nbsp;<a href="">Account</a> .</p>
@@ -69,7 +69,7 @@
     
 
    
-<script src="https://code.jquery.com/jquery-1.7.min.js"></script>     
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 <script  src="function.js"></script>

@@ -3,10 +3,7 @@ body {
     background: url('Background.jpg') no-repeat center center / cover;
     
 }
-.form-horizontal {
-background: rgba(175, 203, 216, 0.616);
 
-}
 .list-unstyled{
     color: rgba(38, 79, 100, 0.616);
 }
@@ -22,6 +19,7 @@ margin-top: 10%;
     padding-bottom: 7px;
 }
 .form-horizontal {
+    background: rgba(175, 203, 216, 0.616);
     padding: 25px 20px;
     border: 2px solid #e8eaed;
     border-radius: 5px;

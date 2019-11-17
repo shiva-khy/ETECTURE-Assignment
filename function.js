@@ -13,15 +13,32 @@ $(document).ready(function() {
             $('#sign-up').attr('disabled', true);
         }
     });
-    $('#confirm-password').blur(function() {
+    $('#confirm-password').keyup(function() {
         if ($('#password').val() !== $('#confirm-password').val()) {
             $('#popover-cpassword').removeClass('hide');
             $('#sign-up').attr('disabled', true);
         } else {
-            $('#popover-cpassword').addClass('hide');
+            $('#popover-cpassword').addClass('hide');    
+            $('#sign-up').attr('disabled', false);
+            $("#sign-up").click(function()
+            {
+                 $("#validateForm").submit(function()
+                    {
+                     alert('Form is submitted');
+                     return true;
+                    });     
+                });
+            
         }
     });
 
+
+  
+
+    
+    
+
+ 
     function checkStrength(password) {
         var strength = 0;
 

@@ -7,6 +7,15 @@ $('#password').keyup(function() {
 
 $(document).ready(function() {
 
+    $("#sign-up").click(function()
+    {
+         $("#validateForm").submit(function()
+            {
+             alert('Form is submitted. Thank you!');
+             return true;
+            });     
+        });
+
     $('#password').keyup(function() {
         var password = $('#password').val();
         if (checkStrength(password) == false) {
@@ -18,25 +27,11 @@ $(document).ready(function() {
             $('#popover-cpassword').removeClass('hide');
             $('#sign-up').attr('disabled', true);
         } else {
-            $('#popover-cpassword').addClass('hide');    
+            $('#popover-cpassword').addClass('hide');        
             $('#sign-up').attr('disabled', false);
-            $("#sign-up").click(function()
-            {
-                 $("#validateForm").submit(function()
-                    {
-                     alert('Form is submitted');
-                     return true;
-                    });     
-                });
-            
         }
+        
     });
-
-
-  
-
-    
-    
 
  
     function checkStrength(password) {

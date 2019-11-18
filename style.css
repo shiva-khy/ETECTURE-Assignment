@@ -39,7 +39,7 @@ margin-top: 10%;
 
 a:link, a:visited {
   font-weight: bold;
-  color: #195385;
+  color: #25017a;
   padding: 4px 5px;
   text-align: center;
   display: inline-block;
@@ -49,7 +49,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  color: #1b147a;
+  color: #1006da;
   cursor: pointer;
 
 }

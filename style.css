@@ -1,7 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
-    background: url('Background.jpg') no-repeat center center / cover;
-    
+    background: url('Background.jpg') no-repeat center center / cover;  
 }
 
 .list-unstyled{
@@ -11,19 +10,23 @@ body {
 .container {
 margin-top: 10%;
 }
+
 .progress {
     height: 10px;
 }
+
 .control-label {
     text-align: left !important;
     padding-bottom: 7px;
 }
+
 .form-horizontal {
     background: rgba(175, 203, 216, 0.616);
     padding: 25px 20px;
     border: 2px solid #e8eaed;
     border-radius: 5px;
 }
+
 .fa-times {
     color: rgb(128, 3, 3);
 }
@@ -36,7 +39,6 @@ margin-top: 10%;
     text-shadow: 3px 2px rgba(175, 203, 216, 0.616);
 }
 
-
 a:link, a:visited {
   font-weight: bold;
   color: #25017a;
@@ -44,8 +46,6 @@ a:link, a:visited {
   text-align: center;
   display: inline-block;
   text-decoration: underline;
- 
-  
 }
 
 a:hover, a:active {
@@ -62,13 +62,12 @@ font-style: italic;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 text-shadow: 1px 2px rgba(207, 218, 223, 0.616);
 padding-top: 20px;
-
 }
 
 #pswd_info {
     position:absolute;
     bottom:-50px;
-    bottom: -115px\9; /* IE Specific */
+    bottom: -115px\9;
     right:15px;
     width:250px;
     padding:15px;
@@ -78,6 +77,7 @@ padding-top: 20px;
     box-shadow:0 1px 3px #ccc;
     border:1px solid #ddd;
 }
+
 #pswd_info::before {
     content: "\25B2";
     position:absolute;
@@ -89,6 +89,7 @@ padding-top: 20px;
     text-shadow:none;
     display:block;
 }
+
 #pswd_info {
     display:none;
 }

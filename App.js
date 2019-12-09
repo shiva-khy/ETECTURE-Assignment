@@ -1,50 +1,29 @@
-$('#password').keyup(function() {
-}).focus(function() {
+$('#password').keyup(function () {
+}).focus(function () {
     $('#pswd_info').show();
-}).blur(function() {
+}).blur(function () {
     $('#pswd_info').hide();
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $("#sign-up").click(function()
-    {
-         $("#validateForm").submit(function()
-            {
-             alert('Form is submitted. Thank you!');
-             return true;
-            });     
-        });
-
-    $('#password').keyup(function() {
-        var password = $('#password').val();
-        if (checkStrength(password) == false) {
-            $('#sign-up').attr('disabled', true);
+    function consoleLog() {
+        var validateForm = document.getElementById("validateForm");
+        //Extract Each Element Value
+        for (var i = 0; i < validateForm.elements.length; i++) {
+        console.log(validateForm.elements[i].value);
         }
-    });
-    $('#confirm-password').keyup(function() {
-        if ($('#password').val() !== $('#confirm-password').val()) {
-            $('#popover-cpassword').removeClass('hide');
-            $('#sign-up').attr('disabled', true);
-        } else {
-            $('#popover-cpassword').addClass('hide');        
-            $('#sign-up').attr('disabled', false);
-        }
-        
-    });
+    }
 
- 
-    function checkStrength(password) {
+    function validatePassword(password) {
         var strength = 0;
 
-
-        //If password contains both lower and uppercase characters, increase strength value.
+        // password contains lower and uppercase => increase strength value.
         if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
             strength += 1;
             $('.low-upper-case').addClass('text-success');
             $('.low-upper-case i').removeClass('fa-times').addClass('fa-check');
             $('#popover-password-top').addClass('hide');
-
 
         } else {
             $('.low-upper-case').removeClass('text-success');
@@ -52,7 +31,7 @@ $(document).ready(function() {
             $('#popover-password-top').removeClass('hide');
         }
 
-        //If it has numbers and characters, increase strength value.
+        //password contains characters & numbers=> increase strength value.
         if (password.match(/([a-zA-Z])/) && password.match(/([0-9])/)) {
             strength += 1;
             $('.one-number').addClass('text-success');
@@ -65,7 +44,7 @@ $(document).ready(function() {
             $('#popover-password-top').removeClass('hide');
         }
 
-        //If it has one special character, increase strength value.
+        //password contains one special character => increase strength value.
         if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
             strength += 1;
             $('.one-special-char').addClass('text-success');
@@ -90,15 +69,13 @@ $(document).ready(function() {
             $('#popover-password-top').removeClass('hide');
         }
 
-
-        // If value is less than 2
-
+        // when value <= 2    
         if (strength < 2) {
             $('#result').removeClass()
             $('#password-strength').addClass('progress-bar-danger');
-
             $('#result').addClass('text-danger').text('Very Week');
             $('#password-strength').css('width', '10%');
+
         } else if (strength == 2) {
             $('#result').addClass('good');
             $('#password-strength').removeClass('progress-bar-danger');
@@ -106,6 +83,7 @@ $(document).ready(function() {
             $('#result').addClass('text-warning').text('Week')
             $('#password-strength').css('width', '60%');
             return 'Week'
+
         } else if (strength == 4) {
             $('#result').removeClass()
             $('#result').addClass('strong');
@@ -113,10 +91,31 @@ $(document).ready(function() {
             $('#password-strength').addClass('progress-bar-success');
             $('#result').addClass('text-success').text('Strength');
             $('#password-strength').css('width', '100%');
-
             return 'Strong'
         }
-
     }
 
+    $("#sign-up").click(function () {
+        $("#validateForm").submit(function () {
+            alert('Form is submitted. Thank you!');
+            consoleLog();
+        });
+    });
+
+    $('#password').keyup(function () {
+        var password = $('#password').val();
+        if (validatePassword(password) == false) {
+            $('#sign-up').attr('disabled', true);
+        }
+    });
+
+    $('#confirm-password').keyup(function () {
+        if ($('#password').val() !== $('#confirm-password').val()) {
+            $('#popover-cpassword').removeClass('hide');
+            $('#sign-up').attr('disabled', true);
+        } else {
+            $('#popover-cpassword').addClass('hide');
+            $('#sign-up').attr('disabled', false);
+        }
+    });
 });
